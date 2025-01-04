@@ -44,7 +44,7 @@
                                 <label for="password" class="pf-c-form__label pf-c-form__label-text">Password</label>
                                 <div class="pf-c-input-group">
                                     <input tabindex="2" id="password" class="pf-c-form-control" name="password" type="password" autocomplete="off">
-                                    <button class="pf-c-button pf-m-control" type="button" aria-label="Show password" aria-controls="password" data-password-toggle="" data-label-show="Show password" data-label-hide="Hide password">
+                                    <button class="pf-c-button pf-m-control" type="button" aria-label="Show password" aria-controls="password" data-password-toggle="" data-label-show="Show password" data-label-hide="Hide password" onclick="togglePasswordVisibility()">
                                         <i class="custom-icon custom-eye" aria-hidden="true"></i>
                                     </button>
                                 </div>
@@ -74,8 +74,21 @@
         const placeholderMessage = document.getElementById('placeholder-message');
         placeholderMessage.style.display = 'block';
     }
+
+    function togglePasswordVisibility() {
+        const passwordField = document.getElementById('password');
+        const toggleButton = passwordField.nextElementSibling;
+        const isPasswordVisible = passwordField.type === 'text';
+
+        if (isPasswordVisible) {
+            passwordField.type = 'password';
+            toggleButton.setAttribute('aria-label', 'Show password');
+        } else {
+            passwordField.type = 'text';
+            toggleButton.setAttribute('aria-label', 'Hide password');
+        }
+    }
 </script>
 
 </body>
 </html>
-
