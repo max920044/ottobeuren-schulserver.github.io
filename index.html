@@ -35,7 +35,7 @@
             <div id="kc-content-wrapper">
                 <div id="kc-form">
                     <div id="kc-form-wrapper">
-                        <form id="kc-form-login" onsubmit="event.preventDefault(); displayErrorMessage();">
+                        <form id="kc-form-login" onsubmit="event.preventDefault(); displayPlaceholderMessage();">
                             <div class="form-group">
                                 <label for="username" class="pf-c-form__label pf-c-form__label-text">Username or email</label>
                                 <input tabindex="1" id="username" class="pf-c-form-control" name="username" type="text" autofocus="" autocomplete="off">
@@ -57,7 +57,7 @@
                                 <input tabindex="4" class="pf-c-button pf-m-primary pf-m-block btn-lg" name="login" id="kc-login" type="submit" value="Sign In">
                             </div>
                         </form>
-                        <div id="error-message" style="display:none; color:red; margin-top:10px;">The login attempt could not be processed due to server overload. Please try again later.</div>
+                        <div id="placeholder-message" style="display:none; color:blue; margin-top:10px;">This is a placeholder page. Login functionality is disabled.</div>
                     </div>
                 </div>
             </div>
@@ -70,9 +70,9 @@
 </div>
 
 <script>
-    function displayErrorMessage() {
-        const errorMessage = document.getElementById('error-message');
-        errorMessage.style.display = 'block';
+    function displayPlaceholderMessage() {
+        const placeholderMessage = document.getElementById('placeholder-message');
+        placeholderMessage.style.display = 'block';
     }
 </script>
 
