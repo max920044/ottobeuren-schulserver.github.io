@@ -1,0 +1,106 @@
+<!DOCTYPE html><html class="login-pf"><head>
+    <meta charset="utf-8">
+    
+    <meta name="robots" content="noindex, nofollow">
+
+            <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sign in to Schulzentrum Ottobeuren</title>
+    <link rel="icon" href="favicon.ico">
+            <link href="css/patternfly.min_1.css" rel="stylesheet">
+            <link href="css/patternfly.min.css" rel="stylesheet">
+            <link href="css/patternfly-additions.min.css" rel="stylesheet">
+            <link href="css/pficon.css" rel="stylesheet">
+            <link href="css/login.css" rel="stylesheet">
+            <link href="css/custom.css" rel="stylesheet">
+            <script src="js/passwordVisibility.js" type="text/javascript"></script>
+        <script type="module">
+            import { checkCookiesAndSetTimer } from "/resources/oljew/login/logodidact/js/authChecker.js";
+
+            checkCookiesAndSetTimer(
+              "6a8994b0-6c43-4754-85bb-815ed795bf19",
+              "6RsJ1vVZM5c",
+              "/realms/master/login-actions/restart?client_id=security-admin-console&tab_id=6RsJ1vVZM5c&client_data=eyJydSI6Imh0dHBzOi8vaWRwLm90dG9iZXVyZW4tc3oubG9nb2lwLmRlL2FkbWluL21hc3Rlci9jb25zb2xlLyIsInJ0IjoiY29kZSIsInJtIjoicXVlcnkiLCJzdCI6IjgwM2Q2Njc5LTI4OWMtNDUwMS1iNTdjLWZlMzNjM2QxOGNjMSJ9&skip_logout=true"
+            );
+        </script>
+</head>
+
+<body class="">
+<div class="header-bar">
+ <div id="kc-header" class="login-pf-page-header">
+        <div id="kc-header-wrapper" class=""><img class="ld-logo-keycloak-left" src="images/keycloak-left.png"> Schulzentrum Ottobeuren <img class="ld-logo-keycloak-right" src="images/keycloak-right.png">
+        </div>
+    </div>
+</div>
+
+<div class="login-pf-page">
+    <div class="card-pf">
+        <header class="login-pf-header">
+                    <h1 id="kc-page-title">
+                        <img src="images/eule.svg" alt="Theo" class="theo-img">
+        Sign in to your account
+
+                    </h1>
+      </header>
+      <div id="kc-content">
+        <div id="kc-content-wrapper">
+
+        <div id="kc-form">
+          <div id="kc-form-wrapper">
+                <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="https://idp.ottobeuren-sz.logoip.de/realms/master/login-actions/authenticate?session_code=V45YLqsnQCAs8N-v3PWomAUuHjLGGYb9toHPPXfsWQk&execution=d43f48cc-cc16-4ca3-8999-8e85f7a231b4&client_id=security-admin-console&tab_id=6RsJ1vVZM5c&client_data=eyJydSI6Imh0dHBzOi8vaWRwLm90dG9iZXVyZW4tc3oubG9nb2lwLmRlL2FkbWluL21hc3Rlci9jb25zb2xlLyIsInJ0IjoiY29kZSIsInJtIjoicXVlcnkiLCJzdCI6IjgwM2Q2Njc5LTI4OWMtNDUwMS1iNTdjLWZlMzNjM2QxOGNjMSJ9" method="post">
+                        <div class="form-group">
+                            <label for="username" class="pf-c-form__label pf-c-form__label-text">
+                                Username or email
+                                </label>
+
+                            <input tabindex="1" id="username" class="pf-c-form-control" name="username" value="" type="text" autofocus="" autocomplete="off" aria-invalid="">
+
+
+                        </div>
+
+                    <div class="form-group">
+                        <label for="password" class="pf-c-form__label pf-c-form__label-text">Password</label>
+
+                        <div class="pf-c-input-group">
+                            <input tabindex="2" id="password" class="pf-c-form-control" name="password" type="password" autocomplete="off" aria-invalid="">
+                            <button class="pf-c-button pf-m-control" type="button" aria-label="Show password" aria-controls="password" data-password-toggle="" data-label-show="Show password" data-label-hide="Hide password">
+                                <i class="custom-icon custom-eye" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+
+                    </div>
+
+                    <div class="form-group login-pf-settings">
+                        <div id="kc-form-options">
+                            </div>
+                            <div class="">
+                            </div>
+
+                      </div>
+
+                      <div id="kc-form-buttons" class="form-group">
+                          <input type="hidden" id="id-hidden-input" name="credentialId">
+                          <input tabindex="4" class="pf-c-button pf-m-primary pf-m-block btn-lg" name="login" id="kc-login" type="submit" value="Sign In">
+                      </div>
+                </form>
+            </div>
+        </div>
+        <script type="module" src="js/passwordVisibility.js"></script>
+
+
+
+
+
+        </div>
+      </div>
+        </div>
+  </div>
+
+<div class="loginFooter">
+  <img src="images/logodidact-white.svg" class="img-left" alt="LogoDIDACT">
+  <a href="http://www.sbe.de" target="_blank"><img src="images/sbe-logo-white.svg" class="img-right" alt="SBE network solutions GmbH"></a>
+</div>
+
+
+
+</body></html>
