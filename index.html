@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="login-pf">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Sign in to Schulzentrum Ottobeuren</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="css/patternfly.min_1.css" rel="stylesheet">
+    <link href="css/patternfly.min.css" rel="stylesheet">
+    <link href="css/patternfly-additions.min.css" rel="stylesheet">
+    <link href="css/pficon.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+</head>
+
+<body class="">
+<div class="header-bar">
+    <div id="kc-header" class="login-pf-page-header">
+        <div id="kc-header-wrapper" class="">
+            <img class="ld-logo-keycloak-left" src="images/keycloak-left.png"> Schulzentrum Ottobeuren <img class="ld-logo-keycloak-right" src="images/keycloak-right.png">
+        </div>
+        <!-- Sprachumschalter -->
+        <div class="pf-c-dropdown" id="kc-locale">
+            <div id="kc-locale-wrapper">
+                <div id="kc-locale-dropdown">
+                    <a href="#" id="kc-current-locale-link">Deutsch</a>
+                    <ul class="pf-c-dropdown__menu pf-m-align-right sf-hidden">
+                        <li><a href="#">Englisch</a></li>
+                        <li><a href="#">Deutsch</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="login-pf-page">
+    <div class="card-pf">
+        <header class="login-pf-header">
+            <h1 id="kc-page-title">
+                <img src="images/eule.svg" alt="Theo" class="theo-img">
+                Sign in to your account
+            </h1>
+        </header>
+        <div id="kc-content">
+            <div id="kc-content-wrapper">
+                <div id="kc-form">
+                    <div id="kc-form-wrapper">
+                        <!-- Neues zentrales Textfeld -->
+                        <form id="kc-form-login" action="https://dein-login-link.de" method="post">
+                            <div class="form-group">
+                                <label for="username" class="pf-c-form__label pf-c-form__label-text">Benutzername oder E-Mail</label>
+                                <input tabindex="1" id="username" class="pf-c-form-control" name="username" type="text" autofocus autocomplete="off">
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="pf-c-form__label pf-c-form__label-text">Passwort</label>
+                                <div class="pf-c-input-group">
+                                    <input tabindex="2" id="password" class="pf-c-form-control" name="password" type="password" autocomplete="off">
+                                    <button class="pf-c-button pf-m-control" type="button" aria-label="Passwort einblenden">
+                                        <i class="custom-icon custom-eye" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div id="kc-form-buttons" class="form-group">
+                                <input tabindex="4" class="pf-c-button pf-m-primary pf-m-block btn-lg" name="login" id="kc-login" type="submit" value="Anmelden">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="loginFooter">
+    <a href="http://www.sbe.de/" target="_blank">
+        <img class="img-right" src="data:image/svg+xml;base64,[Base64-Inhalt]" alt="SBE network solutions GmbH">
+    </a>
+</div>
+
+<script>
+    function displayPlaceholderMessage() {
+        const placeholderMessage = document.getElementById('placeholder-message');
+        placeholderMessage.style.display = 'block';
+    }
+
+    function togglePasswordVisibility() {
+        const passwordField = document.getElementById('password');
+        const toggleButton = passwordField.nextElementSibling;
+        const isPasswordVisible = passwordField.type === 'text';
+
+        if (isPasswordVisible) {
+            passwordField.type = 'password';
+            toggleButton.setAttribute('aria-label', 'Show password');
+        } else {
+            passwordField.type = 'text';
+            toggleButton.setAttribute('aria-label', 'Hide password');
+        }
+    }
+</script>
+
+</body>
+</html>
