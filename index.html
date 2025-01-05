@@ -14,7 +14,7 @@
     <link href="css/custom.css" rel="stylesheet">
 </head>
 
-<body class="">
+<body>
 <div class="header-bar">
     <div id="kc-header" class="login-pf-page-header">
         <div id="kc-header-wrapper" class="">
@@ -57,7 +57,7 @@
                                 <label for="password" class="pf-c-form__label pf-c-form__label-text">Passwort</label>
                                 <div class="pf-c-input-group">
                                     <input tabindex="2" id="password" class="pf-c-form-control" name="password" type="password" autocomplete="off">
-                                    <button class="pf-c-button pf-m-control" type="button" aria-label="Passwort einblenden">
+                                    <button class="pf-c-button pf-m-control toggle-password-visibility" type="button" aria-label="Passwort einblenden">
                                         <i class="custom-icon custom-eye" aria-hidden="true"></i>
                                     </button>
                                 </div>
@@ -79,26 +79,8 @@
     </a>
 </div>
 
-<script>
-    function displayPlaceholderMessage() {
-        const placeholderMessage = document.getElementById('placeholder-message');
-        placeholderMessage.style.display = 'block';
-    }
-
-    function togglePasswordVisibility() {
-        const passwordField = document.getElementById('password');
-        const toggleButton = passwordField.nextElementSibling;
-        const isPasswordVisible = passwordField.type === 'text';
-
-        if (isPasswordVisible) {
-            passwordField.type = 'password';
-            toggleButton.setAttribute('aria-label', 'Show password');
-        } else {
-            passwordField.type = 'text';
-            toggleButton.setAttribute('aria-label', 'Hide password');
-        }
-    }
-</script>
+<!-- Einbindung der externen JavaScript-Datei -->
+<script src="js/password-visibility.js"></script>
 
 </body>
 </html>
